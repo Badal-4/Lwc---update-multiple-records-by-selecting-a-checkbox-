@@ -1,0 +1,9 @@
+<template>
+  <template for:each={accounts.data} for:item="account">
+    <div key={account.Id}>
+      <lightning-input type="checkbox" value={account.Id} onchange={handleChange}></lightning-input>
+      {account.Name}
+    </div>
+  </template>
+  <lightning-button label="Save" variant="brand" onclick={handleSave}></lightning-button>
+</template>
